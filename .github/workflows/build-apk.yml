@@ -1,0 +1,51 @@
+name: Build Android T9Keyboard APK
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v3
+
+    - name: Build APK with Gradle
+      run: |
+        # Jika folder Android berada di root atau subfolder
+        if [ -d "T9Keyboard_Android" ]; then
+          cd T9Keyboard_Android
+        fi
+        chmod +x gradlew || true
+        gradle wrapper
+        ./gradlew assembleRelease --stacktrace
+
+    - name: Find and Rename APK
+      run: |
+        APK_PATH=$(find . -name "*.apk" | head -n 1)
+        if [ -z "$APK_PATH" ]; then
+          echo "Error: File APK tidak ditemukan!"
+          exit 1
+        fi
+        echo "Found APK at: $APK_PATH"
+        cp "$APK_PATH" T9KeyboardHadi-OppoA60.apk
+        ls -lh T9KeyboardHadi-OppoA60.apk
+
+    - name: Upload APK Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: T9KeyboardHadi-OppoA60-APK
+        path: T9KeyboardHadi-OppoA60.apk
+        retention-days: 14
