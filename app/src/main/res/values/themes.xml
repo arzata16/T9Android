@@ -1,0 +1,6 @@
+<resources>
+    <style name="Theme.T9Keyboard" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/suggestion_chip_primary</item>
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+    </style>
+</resources>

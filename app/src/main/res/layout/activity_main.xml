@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F6F9"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📱 T9Keyboard Hadi"
+            android:textColor="#1A1A1A"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Papan Ketik T9 Nokia / GO Keyboard untuk Oppo A60 (ColorOS)"
+            android:textColor="#666666"
+            android:textSize="14sp" />
+
+        <!-- Card Uji Coba -->
+        <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🧪 Uji Coba Ketik di Sini"
+                    android:textColor="#1A1A1A"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etTestInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:drawable/edit_text"
+                    android:hint="Ketuk di sini untuk mencoba T9Keyboard..."
+                    android:minHeight="48dp"
+                    android:padding="10dp"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card Langkah Aktivasi di Oppo A60 ColorOS -->
+        <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="⚙️ Langkah Aktivasi di Oppo A60"
+                    android:textColor="#1A1A1A"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="1. Ketuk tombol 'Aktifkan di Pengaturan' di bawah.\n2. Di menu Pengaturan Tambahan ColorOS, aktifkan 'T9Keyboard Hadi'.\n3. Ketuk tombol 'Pilih Papan Ketik Utama' dan centang 'T9Keyboard Hadi'.\n4. Selesai! Buka WhatsApp dan mulai mengetik!"
+                    android:textColor="#333333"
+                    android:textSize="13.5sp" />
+
+                <Button
+                    android:id="@+id/btnEnableKeyboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:backgroundTint="#0066FF"
+                    android:text="1️⃣ Aktifkan di Pengaturan Oppo"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/btnSelectKeyboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="#34C759"
+                    android:text="2️⃣ Pilih Papan Ketik Utama"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="keyboard_bg">#292929</color>
+    <color name="key_bg">#424242</color>
+    <color name="key_bg_pressed">#5A5A5A</color>
+    <color name="key_func_bg">#333333</color>
+    <color name="key_func_bg_pressed">#474747</color>
+    <color name="key_text_number">#FFFFFF</color>
+    <color name="key_text_letters">#CCCCCC</color>
+    <color name="suggestion_bar_bg">#1F1F1F</color>
+    <color name="suggestion_chip_bg">#383838</color>
+    <color name="suggestion_chip_text">#FFFFFF</color>
+    <color name="suggestion_chip_primary">#4D94FF</color>
+    <color name="divider">#404040</color>
+</resources>
